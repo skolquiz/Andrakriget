@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andra världskriget · Studieplanscher & instuderingsfrågor</title>
+<style>
+  :root{
+    --bg:#ffffff; --text:#1f2328; --soft:#5b636c;
+    --line:#e6e8eb; --line2:#eef0f2;
+    --accent:#2f6fb0;
+    --fraga-bg:#eff4fa; --fraga-bd:#cfe0f0;
+    --cause-bg:#fdf7e9; --cause-bd:#e6c878; --cause-tx:#7a5b12;
+    --effect-bg:#eef4fa; --effect-bd:#7ba6d6; --effect-tx:#2a527e;
+    --int-bg:#eef7ef; --int-bd:#86bd8c; --int-tx:#2f6b39;
+    --note-bg:#f4f6f8; --note-bd:#b5bcc4; --note-tx:#4d555d;
+    --blue:#3b6ea5; --orange:#d2862f; --green:#5a8a4a;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px}
+
+  header.masthead{border-bottom:1px solid var(--line);padding:44px 0 24px}
+  .eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 12px}
+  h1.title{font-size:clamp(2.1rem,6vw,3.4rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:0}
+  .lede{font-size:1.08rem;color:var(--soft);max-width:62ch;margin:16px 0 0}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;font-size:13px;color:var(--soft)}
+  .meta-row b{color:var(--text)}
+
+  .method{background:#f7f9fb;border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:26px 0 4px}
+  .method h2{font-size:1.1rem;font-weight:700;margin:0 0 6px}
+  .method p{margin:0 0 12px;color:var(--soft);font-size:.97rem}
+  .steps{display:flex;flex-wrap:wrap;align-items:center;gap:7px 8px;font-size:13px}
+  .steps .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;white-space:nowrap}
+  .steps .arrow{color:var(--accent);font-weight:700}
+  .steps .chip.int{border-color:var(--int-bd);color:var(--int-tx)}
+
+  nav.toc{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-top:24px}
+  nav.toc ul{list-style:none;margin:0 auto;max-width:880px;padding:10px 22px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin}
+  nav.toc a{display:inline-block;white-space:nowrap;text-decoration:none;font-size:13px;color:var(--soft);border:1px solid transparent;border-radius:999px;padding:5px 11px;transition:.15s}
+  nav.toc a:hover{color:var(--accent);border-color:var(--line);background:#f7f9fb}
+  nav.toc a b{color:var(--accent);font-weight:700;margin-right:6px}
+
+  main{padding:6px 0 20px}
+  .section{padding:46px 0;border-bottom:1px solid var(--line2);scroll-margin-top:60px}
+  .sec-head{display:flex;align-items:center;gap:14px;margin:0 0 20px}
+  .sec-num{font-size:14px;font-weight:700;color:#fff;background:var(--accent);width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .sec-head h3{font-size:clamp(1.4rem,3.6vw,2rem);font-weight:800;line-height:1.1;margin:0;letter-spacing:-.01em}
+
+  figure.poster{margin:0 0 24px;position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#f4f6f8;aspect-ratio:1376/768}
+  figure.poster img{display:block;width:100%;height:100%;object-fit:cover}
+  .poster-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--soft);text-align:center;padding:20px;background:repeating-linear-gradient(45deg,#f4f6f8,#f4f6f8 12px,#eceff2 12px,#eceff2 24px)}
+  .poster-ph .fn{font-size:13px;color:var(--accent);font-weight:600}
+  .poster-ph .nt{font-size:14px}
+
+  .fraga{background:var(--fraga-bg);border:1px solid var(--fraga-bd);border-radius:10px;padding:15px 18px;margin:0 0 22px;font-size:1.04rem;font-weight:500}
+  .fraga .lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;display:block;margin-bottom:4px}
+
+  .svar h4{font-size:1.05rem;font-weight:700;margin:22px 0 8px}
+  .svar h4 .dot{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:8px;vertical-align:middle}
+  .dot.blue{background:var(--blue)} .dot.orange{background:var(--orange)} .dot.green{background:var(--green)}
+  .svar h4 .ph{font-size:.7em;font-weight:500;color:var(--soft);margin-left:6px}
+  .svar p{margin:0 0 12px}
+  .svar ul,.svar ol{margin:0 0 14px;padding-left:1.3em}
+  .svar li{margin:5px 0}
+  .svar li .arr,.block .arr{color:var(--accent);font-weight:700}
+  .lead{color:var(--soft)}
+
+  .block{border:1px solid var(--line);border-left-width:4px;border-radius:0 10px 10px 0;padding:14px 18px;margin:16px 0;background:#fafbfc}
+  .block .bh{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin:0 0 6px}
+  .block p{margin:0 0 8px} .block p:last-child{margin:0}
+  .block ul,.block ol{margin:0;padding-left:1.2em}
+  .block.cause{border-left-color:var(--cause-bd);background:var(--cause-bg)} .block.cause .bh{color:var(--cause-tx)}
+  .block.effect{border-left-color:var(--effect-bd);background:var(--effect-bg)} .block.effect .bh{color:var(--effect-tx)}
+  .block.int{border-left-color:var(--int-bd);background:var(--int-bg)} .block.int .bh{color:var(--int-tx)}
+  .block.note{border-left-color:var(--note-bd);background:var(--note-bg)} .block.note .bh{color:var(--note-tx)}
+
+  footer{padding:34px 0 64px;color:var(--soft);font-size:14px}
+  footer .src{font-size:12px}
+
+  @media(max-width:560px){body{font-size:17px}}
+  @media print{
+    body{font-size:12pt;color:#000}
+    nav.toc,.method .steps{display:none}
+    .section{page-break-inside:avoid}
+    .fraga,.block{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .sec-num{background:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Historia · åk 8 · inför provet v.22</p>
+    <h1 class="title">Andra världskriget</h1>
+    <p class="lede">Sju planscher med fråga och svar. Svaren är skrivna för högre betyg: orsak och följd länkas ihop i kedjor – det ena ledde till det andra. Byggt utifrån texthäftet (s. 280–298) och dokumentet om krigets följder.</p>
+    <div class="meta-row">
+      <span><b>7</b> planscher</span>
+      <span><b>1939–1945</b></span>
+      <span>Tidslinje · Aktörer · 4 fördjupningar · Följder</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="method">
+    <h2>Så når du högre betyg</h2>
+    <p>Beskriv inte bara <i>vad</i> som hände. Bygg svaret som en kedja: en orsak ledde till händelsen, händelsen ledde till en följd, som i sin tur ledde till nästa. Avsluta med din tolkning – både på kort och lång sikt.</p>
+    <div class="steps">
+      <span class="chip">Som bilden visar…</span><span class="arrow">→</span>
+      <span class="chip">orsak ledde till</span><span class="arrow">→</span>
+      <span class="chip">händelse</span><span class="arrow">→</span>
+      <span class="chip">följd, som ledde till…</span><span class="arrow">→</span>
+      <span class="chip int">min tolkning</span>
+    </div>
+  </div>
+</div>
+
+<nav class="toc">
+  <ul>
+    <li><a href="#tidslinje"><b>1</b>Tidslinje</a></li>
+    <li><a href="#aktorer"><b>2</b>Aktörerna</a></li>
+    <li><a href="#pearl-harbor"><b>3</b>Pearl Harbor</a></li>
+    <li><a href="#stalingrad"><b>4</b>Stalingrad</a></li>
+    <li><a href="#d-dagen"><b>5</b>Dagen D</a></li>
+    <li><a href="#atombomberna"><b>6</b>Atombomberna</a></li>
+    <li><a href="#foljder"><b>7</b>Följder</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+
+  <!-- 1 TIDSLINJE -->
+  <section class="section" id="tidslinje">
+    <div class="sec-head"><span class="sec-num">1</span><h3>Tidslinje 1939–1945</h3></div>
+    <figure class="poster">
+      <div class="poster-ph"><span class="fn">bilder/01-tidslinje.png</span><span class="nt">Lägg din FigureLabs-bild här</span></div>
+      <img src="bilder/01-tidslinje.png" alt="Plansch: Andra världskriget – tidslinje 1939–1945" loading="lazy" onerror="this.remove()">
+    </figure>
+    <div class="fraga"><span class="lbl">Fråga</span>Sätt in andra världskrigets viktigaste händelser på en tidslinje och förklara hur kriget utvecklades 1939–1945.</div>
+    <div class="svar">
+      <p class="lead">Som tidslinjen visar pågick kriget i nästan sex år. För högre betyg räcker det inte att rabbla händelserna – man måste visa hur de drev varandra framåt.</p>
+      <h4><span class="dot blue"></span>Fas 1 – Blixtkrigen<span class="ph">1939–41 · blå</span></h4>
+      <ul>
+        <li>1 sep 1939 – Tyskland anfaller Polen <span class="arr">→</span> kriget startar</li>
+        <li>1939–40 – Finska vinterkriget</li>
+        <li>april 1940 – Danmark och Norge ockuperas</li>
+        <li>maj 1940 – Frankrike anfalls och besegras</li>
+        <li>1940 – Slaget om Storbritannien (första gången Tyskland <i>inte</i> vinner)</li>
+      </ul>
+      <h4><span class="dot orange"></span>Fas 2 – Kriget blir globalt<span class="ph">1941 · orange</span></h4>
+      <ul>
+        <li>juni 1941 – Operation Barbarossa: Tyskland anfaller Sovjet</li>
+        <li>7 dec 1941 – Pearl Harbor: Japan anfaller USA</li>
+      </ul>
+      <h4><span class="dot green"></span>Fas 3 – De allierades seger<span class="ph">1942–45 · grön</span></h4>
+      <ul>
+        <li>1942–43 – Slaget om Stalingrad <span class="arr">→</span> vändpunkten</li>
+        <li>6 juni 1944 – Dagen D: landstigning i Normandie</li>
+        <li>augusti 1945 – Atombomberna <span class="arr">→</span> Japan kapitulerar</li>
+      </ul>
+      <div class="block cause">
+        <p class="bh">Hur drev händelserna varandra?</p>
+        <p>Tysklands snabba segrar i väst gjorde Hitler övermodig, <span class="arr">vilket ledde till</span> att han 1941 öppnade fler fronter: anfallet på Sovjet (Barbarossa) och – via Japan – Pearl Harbor. <span class="arr">Detta drog in</span> de två största stormakterna, Sovjet och USA, <span class="arr">som i sin tur</span> gav de allierade ett avgörande övertag i folk och industri. Övertaget <span class="arr">ledde till</span> vändpunkten vid Stalingrad och till Dagen D, som klämde Tyskland från två håll – och till slut till atombomberna och Japans kapitulation.</p>
+      </div>
+      <div class="block int">
+        <p class="bh">Min tolkning</p>
+        <p>Tidslinjen visar en tydlig kedja: Tysklands tidiga framgångar gjorde Hitler så självsäker att han drog in just de stormakter (Sovjet och USA) som till sist blev för starka. På lång sikt ledde krigets utgång till en helt ny världsordning – två supermakter och kalla kriget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 AKTÖRERNA -->
+  <section class="section" id="aktorer">
+    <div class="sec-head"><span class="sec-num">2</span><h3>Aktörerna i kriget</h3></div>
+    <figure class="poster">
+      <div class="poster-ph"><span class="fn">bilder/02-aktorer.png</span><span class="nt">Lägg din FigureLabs-bild här</span></div>
+      <img src="bilder/02-aktorer.png" alt="Plansch: Aktörerna i andra världskriget" loading="lazy" onerror="this.remove()">
+    </figure>
+    <div class="fraga"><span class="lbl">Fråga</span>Vilka länder ingick i axelmakterna respektive de allierade? Stämmer det att det bara var tre länder på varje sida?</div>
+    <div class="svar">
+      <p class="lead">Som planschen visar fanns det två sidor – men de tre stormakterna på varje sida var bara de <i>ledande</i>, inte de enda.</p>
+      <h4>Axelmakterna – de tre ledande</h4>
+      <ul><li>Tyskland</li><li>Italien</li><li>Japan</li></ul>
+      <p>Med dem stod bundsförvanterna <b>Ungern, Rumänien och Bulgarien</b>, samt <b>Finland</b> (medkrigförande).</p>
+      <h4>De allierade – de tre ledande</h4>
+      <ul><li>Storbritannien</li><li>Sovjetunionen</li><li>USA (från 1941)</li></ul>
+      <p>På deras sida kämpade även <b>det fria Frankrike</b> (de Gaulle) och flera länders <b>exilregeringar</b>.</p>
+      <h4>Länder som hamnade i kläm</h4>
+      <ul>
+        <li>Danmark, Norge, Nederländerna, Belgien – neutrala men ockuperades av Tyskland</li>
+        <li>Frankrike – allierat 1939 <span class="arr">→</span> ockuperat 1940 <span class="arr">→</span> befriat 1944</li>
+      </ul>
+      <div class="block cause">
+        <p class="bh">Hur formades sidorna?</p>
+        <p>Tyskland, Italien och Japan delade stark nationalism, lust att ta andras landområden och hat mot kommunismen, <span class="arr">vilket ledde till</span> att de slöt sig samman som axelmakterna. Tysklands aggression <span class="arr">ledde till</span> att Storbritannien och Frankrike lovade skydda Polen. När Tyskland sedan anföll Sovjet och Japan anföll USA 1941 <span class="arr">ledde det till</span> att Storbritannien fick två mäktiga medkämpar – och de allierade var födda.</p>
+      </div>
+      <div class="block int">
+        <p class="bh">Min tolkning</p>
+        <p>Vilka som stod på varje sida avgjorde kriget: de allierades samlade folkmängd och industri ledde till övertaget. Att även små neutrala länder drogs in gjorde det till ett <i>världskrig</i>, och uppdelningen mellan öst och väst lade på lång sikt grunden för det delade Europa efter kriget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 PEARL HARBOR -->
+  <section class="section" id="pearl-harbor">
+    <div class="sec-head"><span class="sec-num">3</span><h3>Pearl Harbor</h3></div>
+    <figure class="poster">
+      <div class="poster-ph"><span class="fn">bilder/03-pearl-harbor.png</span><span class="nt">Lägg din FigureLabs-bild här</span></div>
+      <img src="bilder/03-pearl-harbor.png" alt="Plansch: Anfallet mot Pearl Harbor" loading="lazy" onerror="this.remove()">
+    </figure>
+    <div class="fraga"><span class="lbl">Fråga</span>Varför anföll Japan den amerikanska flottbasen Pearl Harbor, och vilka följder fick anfallet?</div>
+    <div class="svar">
+      <p class="lead">Som planschen visar anföll Japan utan krigsförklaring den amerikanska flottbasen Pearl Harbor den 7 december 1941. Det som lyfter svaret till A är att förklara <i>kedjan</i> – hur det ena ledde till det andra.</p>
+      <div class="block cause">
+        <p class="bh">Orsakskedjan</p>
+        <p>Japan ville bygga ett stort imperium i Östasien. <span class="arr">Detta ledde till</span> att USA:s Stillahavsflotta uppfattades som det sista hindret, <span class="arr">vilket i sin tur ledde till</span> beslutet att slå ut flottan i ett enda överraskningsanfall – Pearl Harbor.</p>
+      </div>
+      <div class="block effect">
+        <p class="bh">Följdkedjan – det ena gav det andra</p>
+        <p>Anfallet <span class="arr">ledde till</span> att USA, som dittills hållit sig utanför, förklarade krig mot Japan. <span class="arr">Detta gjorde att</span> Tyskland tre dagar senare förklarade krig mot USA, <span class="arr">vilket i sin tur</span> knöt ihop kriget i Europa och kriget i Asien till ett enda globalt krig. Eftersom USA var en industriell stormakt <span class="arr">ledde</span> dess inträde på sikt till att de allierade fick ett avgörande övertag – <span class="arr">vilket till slut</span> bidrog till axelmakternas nederlag.</p>
+      </div>
+      <div class="block int">
+        <p class="bh">Min tolkning (kort + lång sikt)</p>
+        <p>På kort sikt var Pearl Harbor en japansk seger, men på lång sikt ett ödesdigert misstag: genom att väcka USA startade Japan en kedja som ledde till dess eget nederlag. Följderna sträckte sig ännu längre – USA:s inträde banade väg för landets roll som supermakt efter kriget, vilket blev en av grunderna till det kalla kriget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 STALINGRAD -->
+  <section class="section" id="stalingrad">
+    <div class="sec-head"><span class="sec-num">4</span><h3>Slaget om Stalingrad</h3></div>
+    <figure class="poster">
+      <div class="poster-ph"><span class="fn">bilder/04-stalingrad.png</span><span class="nt">Lägg din FigureLabs-bild här</span></div>
+      <img src="bilder/04-stalingrad.png" alt="Plansch: Slaget om Stalingrad" loading="lazy" onerror="this.remove()">
+    </figure>
+    <div class="fraga"><span class="lbl">Fråga</span>Vad hände vid Stalingrad och varför brukar slaget kallas en vändpunkt i kriget?</div>
+    <div class="svar">
+      <p class="lead">Som planschen visar trängde tyska trupper fram till Stalingrad – men där bröts deras framgång under 1942–43.</p>
+      <div class="block cause">
+        <p class="bh">Orsakskedjan (steg för steg)</p>
+        <ol>
+          <li>Operation Barbarossa förde tyskarna ända fram till Stalingrad</li>
+          <li>Hårt motstånd och sträng vinterköld stoppade dem</li>
+          <li>Sovjets motanfall i november 1942 ringade in en hel tysk armé</li>
+          <li>Hitlers order "ingen reträtt" <span class="arr">ledde till</span> att armén gick förlorad – utsvulten kapitulerade den i januari 1943</li>
+        </ol>
+      </div>
+      <div class="block effect">
+        <p class="bh">Följdkedjan</p>
+        <p>Nederlaget <span class="arr">ledde till</span> att omvärlden såg att tyskarna kunde besegras, <span class="arr">vilket i sin tur</span> gav Sovjet initiativet. Det <span class="arr">ledde till</span> att tyskarna pressades steg för steg västerut – en rörelse som till slut förde Röda armén ända till Berlin.</p>
+      </div>
+      <div class="block int">
+        <p class="bh">Min tolkning (kort + lång sikt)</p>
+        <p>På kort sikt var Stalingrad en katastrofal förlust; på lång sikt krigets vändpunkt på östfronten. Att Hitler satte prestige före soldaternas liv förvärrade förlusten. Och Sovjets segermarsch västerut ledde i förlängningen till att Östeuropa hamnade under sovjetiskt inflytande – en av grunderna till kalla kriget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 DAGEN D -->
+  <section class="section" id="d-dagen">
+    <div class="sec-head"><span class="sec-num">5</span><h3>Dagen D – Normandie</h3></div>
+    <figure class="poster">
+      <div class="poster-ph"><span class="fn">bilder/05-d-dagen.png</span><span class="nt">Lägg din FigureLabs-bild här</span></div>
+      <img src="bilder/05-d-dagen.png" alt="Plansch: Dagen D – invasionen i Normandie" loading="lazy" onerror="this.remove()">
+    </figure>
+    <div class="fraga"><span class="lbl">Fråga</span>Vad hände under Dagen D den 6 juni 1944, och varför var invasionen så viktig?</div>
+    <div class="svar">
+      <p class="lead">Som planschen visar genomförde Storbritannien och USA en enorm landstigning mot de tyska trupperna i Normandie vid Frankrikes kust.</p>
+      <div class="block cause">
+        <p class="bh">Orsakskedjan</p>
+        <p>De allierade behövde avlasta Sovjet i öster och bryta det Hitler kallade "Festung Europa". <span class="arr">Detta ledde till</span> beslutet om en stor landstigning i väster. Den 6 juni 1944 <span class="arr">ledde det till</span> invasionen i Normandie; tyskarna överraskades av mängden fartyg och kunde inte stoppa övermakten.</p>
+      </div>
+      <div class="block effect">
+        <p class="bh">Följdkedjan</p>
+        <p>Genombrottet <span class="arr">ledde till</span> att Frankrike och Paris befriades sommaren 1944, <span class="arr">vilket i sin tur</span> gjorde att Tyskland nu pressades från två håll samtidigt – väster (de allierade) och öster (Sovjet). Det <span class="arr">ledde till</span> Tysklands kollaps och kapitulation i maj 1945.</p>
+      </div>
+      <div class="block int">
+        <p class="bh">Min tolkning (kort + lång sikt)</p>
+        <p>Dagen D var början på slutet för Nazityskland. Den hade också en långsiktig följd: eftersom de västallierade nådde långt in i Europa innan Sovjet tog allt, kom det att avgöra <i>var</i> gränsen mellan öst och väst hamnade efter kriget – alltså var järnridån sedan drogs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 ATOMBOMBERNA -->
+  <section class="section" id="atombomberna">
+    <div class="sec-head"><span class="sec-num">6</span><h3>Atombomberna</h3></div>
+    <figure class="poster">
+      <div class="poster-ph"><span class="fn">bilder/06-atombomberna.png</span><span class="nt">Lägg din FigureLabs-bild här</span></div>
+      <img src="bilder/06-atombomberna.png" alt="Plansch: Atombomberna över Hiroshima och Nagasaki" loading="lazy" onerror="this.remove()">
+    </figure>
+    <div class="fraga"><span class="lbl">Fråga</span>Varför valde USA att fälla atombomberna, vilka motiv har historiker diskuterat, och vilka blev följderna?</div>
+    <div class="svar">
+      <p class="lead">Som planschen visar fällde USA atombomber över de japanska städerna Hiroshima (6 augusti 1945) och Nagasaki (9 augusti). Beslutet fattades av president Harry S. Truman, eftersom Roosevelt dött i april samma år.</p>
+      <div class="block cause">
+        <p class="bh">Orsakskedjan</p>
+        <p>Det japanska motståndet var stenhårt, <span class="arr">vilket gjorde att</span> en vanlig invasion väntades kosta enormt många liv. Samtidigt hade USA fått fram ett nytt och fruktansvärt vapen – <span class="arr">detta ledde till</span> att Truman beslöt att använda atombomberna.</p>
+      </div>
+      <div class="block note">
+        <p class="bh">Historikernas fråga – två motiv</p>
+        <ul>
+          <li>För att spara amerikanska soldaters liv?</li>
+          <li>Eller för att visa att USA nu var världens starkaste stormakt?</li>
+        </ul>
+      </div>
+      <div class="block effect">
+        <p class="bh">Följdkedjan</p>
+        <p>Bomberna <span class="arr">ledde till</span> fruktansvärda skador (omkring 100 000 döda eller skadade i Hiroshima, många senare cancer av strålningen) och till att Japan kapitulerade den 15 augusti 1945 – <span class="arr">vilket</span> avslutade andra världskriget. På längre sikt <span class="arr">ledde</span> demonstrationen av vapnets kraft till kärnvapenkapprustning och en ständig rädsla under kalla kriget.</p>
+      </div>
+      <div class="block int">
+        <p class="bh">Min tolkning (kort + lång sikt)</p>
+        <p>På kort sikt avslutade bomberna kriget snabbt; på lång sikt inledde de kärnvapenåldern. Att USA visade sin överlägsna styrka ledde dessutom till ökad spänning gentemot Sovjet – ännu en tråd in i det kalla kriget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 FÖLJDER -->
+  <section class="section" id="foljder">
+    <div class="sec-head"><span class="sec-num">7</span><h3>Krigets följder</h3></div>
+    <figure class="poster">
+      <div class="poster-ph"><span class="fn">bilder/07-foljder.png</span><span class="nt">Lägg din FigureLabs-bild här</span></div>
+      <img src="bilder/07-foljder.png" alt="Plansch: Andra världskrigets följder" loading="lazy" onerror="this.remove()">
+    </figure>
+    <div class="fraga"><span class="lbl">Fråga</span>Vilka blev de viktigaste följderna av andra världskriget?</div>
+    <div class="svar">
+      <p class="lead">Som planschen visar fick kriget enorma följder – och det viktigaste för A är att se hur de hänger ihop i en kedja.</p>
+      <h4>De fem viktigaste följderna</h4>
+      <ul>
+        <li><b>Enorma förluster</b> – minst 29 miljoner soldater och minst lika många civila dog; Sovjet förlorade över 20 miljoner</li>
+        <li><b>Europas karta ritas om</b> – Tyskland minskas och delas i Väst- och Östtyskland; Sovjet får makt över Östeuropa</li>
+        <li><b>Det kalla kriget</b> – de forna vännerna USA och Sovjet blir fiender</li>
+        <li><b>FN bildas 1945</b> – ska bevara fred och säkerhet</li>
+        <li><b>Marshallhjälpen 1947</b> – USA hjälper Västeuropa ekonomiskt; öst halkar efter</li>
+      </ul>
+      <div class="block effect">
+        <p class="bh">Så hängde följderna ihop</p>
+        <p>De enorma förlusterna och Tysklands nederlag <span class="arr">ledde till</span> att segrarmakterna ritade om Europas karta: Tyskland delades och Sovjet fick makt över Östeuropa. <span class="arr">Detta ledde till</span> att de forna vännerna USA och Sovjet blev motståndare – kalla kriget. Samtidigt <span class="arr">ledde</span> erfarenheten av kriget till att FN bildades för att förhindra nya krig, medan USA:s Marshallhjälp <span class="arr">ledde till</span> att Västeuropa snabbt återhämtade sig och öst halkade efter – <span class="arr">vilket fördjupade</span> klyftan i det delade Europa.</p>
+      </div>
+      <div class="block int">
+        <p class="bh">Min tolkning (kort + lång sikt)</p>
+        <p>Andra världskriget ledde inte bara till fred utan till en helt ny världsordning. Kedjan gick: krig <span class="arr">→</span> segrarmakternas uppgörelser <span class="arr">→</span> delat Europa <span class="arr">→</span> kalla kriget. På samma gång var FN ett försök att bryta den äldre kedjan av ständigt återkommande storkrig.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="src">Källor: texthäftet "Andra världskriget" (s. 280–298) samt dokumentet "Andra världskrigets följder". Planscher gjorda i FigureLabs. Alla prompter finns i filen prompter.md.</p>
+    <p>Studiematerial inför historieprovet · åk 8</p>
+  </div>
+</footer>
+
+</body>
+</html>
